@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Echo()
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ deactivate()
+comment3.params=
+comment3.target=void\ activate()
+comment4.params=
+comment4.target=void\ keyListen()
+comment5.params=f
+comment5.target=void\ update(double)
+numComments=6

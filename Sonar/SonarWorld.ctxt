@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SonarWorld()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ EchoWorld.\r\n\ \r\n
+comment1.params=e\ t\ n
+comment1.target=SonarWorld(double,\ double,\ java.lang.String)
+comment2.params=
+comment2.target=double\ getDistance()
+numComments=3

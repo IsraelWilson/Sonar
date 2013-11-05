@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=EnterAmount()
+comment1.target=void\ act()
+comment2.target=void\ deactivate()
+comment3.target=void\ activate()
+comment4.target=void\ keyListen()
+comment5.params=f
+comment5.target=void\ update(double)
+numComments=6
