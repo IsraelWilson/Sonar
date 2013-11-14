@@ -7,7 +7,7 @@ import java.awt.Color;  // (World, Actor, GreenfootImage, Greenfoot and MouseInf
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SonarWorld extends World
+public class SonarWorldW extends World
 {
     String name;
     double echo;
@@ -19,12 +19,12 @@ public class SonarWorld extends World
      * Constructor for objects of class EchoWorld.
      * 
      */
-    public SonarWorld()
+    public SonarWorldW()
     {
         super(800, 400, 1);
     }
     
-    public SonarWorld( double e, double t, String n, int passT )
+    public SonarWorldW( double e, double t, String n, int passT )
     {
        super(800, 400, 1);
        //Deault reference values
@@ -52,7 +52,8 @@ public class SonarWorld extends World
         //Convert string data into double value
         double echoVal = echo;
         double tempVal = temp;
-         if( tempType == 1 ){
+        
+        if( tempType == 1 ){
              double hold = tempVal - 32;
              tempVal = hold / 1.8;
              

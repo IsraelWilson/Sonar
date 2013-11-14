@@ -19,6 +19,8 @@ import java.awt.Point;  // (World, Actor, GreenfootImage, Greenfoot and MouseInf
 public class InputWorld extends World
 {
     private int world;
+    private int theLevel;
+    private int theTemp;
     
     private Button celsius;
     private Button fahrenheit;
@@ -43,6 +45,10 @@ public class InputWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 400, 1);
         setPaintOrder(GUI.class);
+        
+        //Surface level and type of temperature
+        theLevel = 0;
+        theTemp = 0;
         
         //Give default vales to references when world is created
         name = "name";
@@ -97,6 +103,7 @@ public class InputWorld extends World
         if (celsius.wasClicked())
         {
             // Do something
+            theTemp = 0;
             
         }
         
@@ -104,6 +111,7 @@ public class InputWorld extends World
         if (fahrenheit.wasClicked())
         {
             // Do something
+            theTemp = 1;
             
         }
         
@@ -111,6 +119,7 @@ public class InputWorld extends World
         if (surface.wasClicked())
         {
             // Do something
+            theLevel = 0;
             
         }
         
@@ -118,6 +127,7 @@ public class InputWorld extends World
         if (underwater.wasClicked())
         {
             // Do something
+            theLevel = 1;
             
         }
         
@@ -136,13 +146,18 @@ public class InputWorld extends World
                 
                 
                 //Change worlds and display sound wave
-                Greenfoot.setWorld(new SonarWorld(echo, temp, name));
-                
-            }
-            else{
-                world = 1;
+                if( theLevel == 0 )
+                {
+                    Greenfoot.setWorld(new SonarWorld(echo, temp, name, theTemp));
+                }
+                else if ( theLevel == 1 )
+                {
+                    Greenfoot.setWorld(new SonarWorldW(echo, temp, name, theTemp));
+                }
+                else{
+                    world = 1;
+                }
             }
         }
-        
     }
 }

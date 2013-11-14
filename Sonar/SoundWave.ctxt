@@ -12,4 +12,6 @@ comment4.params=direction
 comment4.target=void\ setDirection(int)
 comment5.params=
 comment5.target=void\ reflect()
-numComments=6
+comment6.params=
+comment6.target=void\ collision()
+numComments=7

@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.params=
-comment0.target=SonarWorld()
+comment0.target=SonarWorldW()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ EchoWorld.\r\n\ \r\n
 comment1.params=e\ t\ n\ passT
-comment1.target=SonarWorld(double,\ double,\ java.lang.String,\ int)
+comment1.target=SonarWorldW(double,\ double,\ java.lang.String,\ int)
 comment2.params=tempType
 comment2.target=double\ getDistance(int)
 numComments=3

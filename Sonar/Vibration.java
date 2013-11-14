@@ -1,41 +1,48 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-import java.util.List;
-import java.util.ArrayList;
-
 /**
- * Write a description of class SoundWave here.
+ * Write a description of class Vibration here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class SoundWave extends Actor
+public class Vibration extends SoundWave
 {
     private static final int EAST = 0;
     private static final int WEST = 1;
     private static final int NORTH = 2;
     private static final int SOUTH = 3;
-
+    long startTime;
     private int direction;
-    
-    public SoundWave()
-    {
-        setDirection(EAST);
-    }
     /**
-     * Act - do whatever the SoundWave wants to do. This method is called whenever
+     * Act - do whatever the Vibration wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public Vibration()
+    {
+        startTime = System.currentTimeMillis();
+        setDirection(EAST);
+    }
+    
     public void act() 
     {
-        collision();
+        // Add your action code here.
+        long currentTime = System.currentTimeMillis();
+        int durationMillis = (int)( currentTime - startTime );
         
-       if(canMove()) {
+        int durationSecs = durationMillis / 1000;
+        
+        if(canMove()) {
             move();
         }
         else {
-            reflect();
-        } // Add your action code here.
+            getWorld().removeObject(this);
+        }
+        
+        if( durationSecs == 2 )
+        {
+            getWorld().removeObject(this);
+        }
     }
     
     public void move()
@@ -86,13 +93,7 @@ public class SoundWave extends Actor
             return false;
         }
         
-        List squares = myWorld.getObjectsAt( x, y, Square.class );
-        if( squares.isEmpty() ){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return true;
     }
     
     public void setDirection(int direction)
@@ -114,48 +115,5 @@ public class SoundWave extends Actor
             default :
                 break;
         }
-    }
-    
-    public void reflect()
-    {
-        switch(direction) {
-            case EAST :
-                setDirection(WEST);
-                break;
-            case WEST :
-                setDirection(EAST);
-                break;
-        }
-    }
-    
-    public void collision()
-    {
-        //SoundWave a = new SoundWave();
-        Actor a = getOneIntersectingObject( Square.class );
-        
-        if( a != null )
-        {
-            //Reflect sounds waves all around for a dew seconds here
-            World sw = getWorld();
-            
-            int X = a.getX();
-            int Y = a.getY();
-            
-            Vibration nV = new Vibration();
-            Vibration sV = new Vibration();
-            Vibration eV = new Vibration();
-            Vibration wV = new Vibration();
-            
-            nV.setDirection( 2 );
-            sV.setDirection( 3 );
-            eV.setDirection( 0 );
-            wV.setDirection( 1 );
-            
-            sw.addObject( nV, X, Y - 25 );
-            sw.addObject( sV, X, Y + 25 );
-            sw.addObject( eV, X + 25, Y );
-            sw.addObject( wV, X - 25, Y );
-        }
-        
     }
 }
