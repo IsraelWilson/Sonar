@@ -33,17 +33,23 @@ public class SonarWorld extends World
        temp = t;
        distance = getDistance( passT );
        
-       addObject( new Label("Source"), 50, 175 );
-       addObject( new Square(), 50, 200 );
-        
-       addObject( new Label( name ), 750, 175 );
-       addObject( new Square(), 750, 200 );
-        
-       addObject( new SoundWave(), 150, 200 );
+       //Set the distance between the squares
+       //Distance can not be grater than 650
+       //Sqaure width = 75
+       int leftSquare = 325 - ((int)(echo/4));
+       int rightSquare = 475 + ((int)(echo/4));
+       
+       //Sqaure Object
+       addObject( new Square(), leftSquare, 200 );
+       addObject( new Square(), rightSquare, 200 );
+       
+       //Sound wave object
+       addObject( new SoundWave(), leftSquare + 75, 200 );
        
        //Show the calculated distance
        Label caption = new Label("The distance from SOURCE to " + name + " is " + distance );
        caption.setColor( Color.white );
+       caption.setSize( 20 );
        addObject( caption, 400, 300 );
     }
     

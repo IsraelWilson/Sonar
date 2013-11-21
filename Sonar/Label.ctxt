@@ -23,4 +23,6 @@ comment7.target=void\ setFont(java.awt.Font)
 comment7.text=\r\n\ Set\ the\ Font\ this\ Label\ is\ using.\r\n\ @param\ font\ The\ Font\ for\ this\ Label\ to\ use.\r\n
 comment8.params=c
 comment8.target=void\ setColor(java.awt.Color)
-numComments=9
+comment9.params=size
+comment9.target=void\ setSize(int)
+numComments=10

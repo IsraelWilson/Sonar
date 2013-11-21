@@ -35,13 +35,11 @@ public class Vibration extends SoundWave
         if(canMove()) {
             move();
         }
-        else {
+        else if ( durationSecs == 1) {
             getWorld().removeObject(this);
         }
-        
-        if( durationSecs == 2 )
-        {
-            getWorld().removeObject(this);
+        else{
+            getWorld().removeObject(this);            
         }
     }
     
@@ -116,4 +114,5 @@ public class Vibration extends SoundWave
                 break;
         }
     }
+    
 }

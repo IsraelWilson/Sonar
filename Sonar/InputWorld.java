@@ -104,6 +104,8 @@ public class InputWorld extends World
         {
             // Do something
             theTemp = 0;
+            fahrenheit.setBackground( Color.GRAY );
+            celsius.setBackground( Color.RED );
             
         }
         
@@ -143,7 +145,6 @@ public class InputWorld extends World
                 name = nameBox.getText();
                 double echo = Double.parseDouble( echoBox.getText() );                
                 double temp = Double.parseDouble( tempBox.getText() );
-                
                 
                 //Change worlds and display sound wave
                 if( theLevel == 0 )

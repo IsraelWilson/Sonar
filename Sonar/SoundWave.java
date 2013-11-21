@@ -151,10 +151,11 @@ public class SoundWave extends Actor
             eV.setDirection( 0 );
             wV.setDirection( 1 );
             
-            sw.addObject( nV, X, Y - 25 );
-            sw.addObject( sV, X, Y + 25 );
-            sw.addObject( eV, X + 25, Y );
-            sw.addObject( wV, X - 25, Y );
+            sw.addObject( nV, X, Y - 50 );
+            sw.addObject( sV, X, Y + 50 );
+            sw.addObject( eV, X + 50, Y );
+            sw.addObject( wV, X - 50, Y );
+            
         }
         
     }

@@ -108,4 +108,12 @@ public class Label extends Window
         color = c;
         setImage(draw());
     }
+    
+    public void setSize( int size )
+    {
+        this.font = new Font("Times-Roman", Font.PLAIN, size);
+        setImage(draw());
+        
+        
+    }
 }
