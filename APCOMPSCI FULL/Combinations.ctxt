@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.target=Combinations()
-comment1.target=void\ act()
-comment2.target=void\ count()
-comment3.target=void\ write()
-comment4.params=f
-comment4.target=void\ update(double)
-numComments=5

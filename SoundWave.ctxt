@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SoundWave()
+comment1.params=dir\ num
+comment1.target=SoundWave(int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ SoundWave\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ move()
+comment4.params=
+comment4.target=boolean\ canMove()
+comment5.params=dir
+comment5.target=void\ setDirection(int)
+comment6.params=
+comment6.target=boolean\ hitSquare()
+comment7.params=
+comment7.target=int\ getDirection()
+numComments=8

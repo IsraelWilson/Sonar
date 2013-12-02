@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=BitFont()
-comment1.params=str
-comment1.target=greenfoot.GreenfootImage\ getImage(char)
-comment2.params=img\ str\ x\ y
-comment2.target=void\ drawStringOn(greenfoot.GreenfootImage,\ java.lang.String,\ int,\ int)
-numComments=3

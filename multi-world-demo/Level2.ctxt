@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=Level2()
-comment0.text=\r\n\ Default\ constructor.\ If\ we\ don't\ receive\ a\ game\ character,\ create\ one.\r\n
-comment1.params=pengu
-comment1.target=Level2(Pengu)
-comment1.text=\r\n\ Constructor\ used\ during\ play\ -\ the\ game\ character\ is\ passed\ in.\r\n
-numComments=2
