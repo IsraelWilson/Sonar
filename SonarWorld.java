@@ -1,5 +1,8 @@
 import greenfoot.*;
-import java.awt.Color;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.awt.Color;
+import java.awt.Point;
+import java.awt.Font;
+import java.awt.GraphicsEnvironment;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class EchoWorld here.
@@ -15,6 +18,9 @@ public class SonarWorld extends World
     double distance;
     int leftSquare;
     int rightSquare;
+    
+    private Button reset;
+    private Button input;
     
 
     /**
@@ -58,6 +64,16 @@ public class SonarWorld extends World
        caption.setSize( 20 );
        addObject( caption, 400, 300 );
        
+       //Final input button
+        input = new Button("Input", new Point(100, 50));
+        input.setBackground(Color.green);
+        addObject( input, 700, 375 );
+        
+        //Final reset button
+        reset = new Button("Reset", new Point(100, 50));
+        reset.setBackground(Color.green);
+        addObject( reset, 100, 375 );
+       
        
     }
     
@@ -84,6 +100,21 @@ public class SonarWorld extends World
     
     public int getRSquare(){
         return rightSquare;
-    }    
+    }
+    
+    public void act(){
+        if (reset.wasClicked())
+        {
+            // Do something
+            Greenfoot.setWorld(new PromptOne());            
+        }
+        
+        if (input.wasClicked())
+        {
+            // Do something
+            Greenfoot.setWorld(new InputWorld());            
+        }    
+        
+    }
     
 }

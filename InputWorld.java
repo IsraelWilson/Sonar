@@ -25,7 +25,7 @@ public class InputWorld extends World
     private Button celsius;
     private Button fahrenheit;
     private Button surface;
-    private Button underwater;
+    private Button space;
     private Button calculate;
     
     private TextBox nameBox;
@@ -81,11 +81,11 @@ public class InputWorld extends World
         addObject( new Label("Choose sea level:"), 310, 275 );
         //Buttons for sea level
         surface = new Button("Surface", new Point(75, 15));
-        underwater = new Button("Space", new Point(75, 15));
+        space = new Button("Space", new Point(75, 15));
         surface.setBackground(Color.yellow);
-        underwater.setBackground(Color.cyan);
+        space.setBackground(Color.cyan);
         addObject( surface, 300, 300 );
-        addObject( underwater, 380, 300 );
+        addObject( space, 380, 300 );
         
         //Final Calculate button
         calculate = new Button("Calculate", new Point(100, 50));
@@ -126,7 +126,7 @@ public class InputWorld extends World
         }
         
         // Listen for if the Button is clicked
-        if (underwater.wasClicked())
+        if (space.wasClicked())
         {
             // Do something
             theLevel = 1;
@@ -153,7 +153,7 @@ public class InputWorld extends World
                 }
                 else if ( theLevel == 1 )
                 {
-                    Greenfoot.setWorld(new SonarWorldW(echo, temp, name, theTemp));
+                    Greenfoot.setWorld(new SonarWorldS());
                 }
                 else{
                     world = 1;

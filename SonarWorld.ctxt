@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=int\ getLSquare()
 comment4.params=
 comment4.target=int\ getRSquare()
-numComments=5
+comment5.params=
+comment5.target=void\ act()
+numComments=6
