@@ -83,7 +83,7 @@ public class PromptOne extends World
         line11.setSize( 18 );
         addObject( line11, 400, 300 );
         
-        Label line12 = new Label( "v = 331.4 m/s + 0.6 m/s * T celsius" );
+        Label line12 = new Label( "v = 331.4 m/s + 0.6 m/s/C * T celsius" );
         line12.setColor( Color.black );
         line12.setSize( 25 );
         addObject( line12, 400, 330 );        
