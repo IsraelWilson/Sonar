@@ -63,7 +63,7 @@ public class SonarWorld extends World
        addObject( new Timer(), 0, 0 );
        
        //Show the calculated speed of sound
-       Label caption = new Label("The speed of sound is " + getSpeed( passT ) );
+       Label caption = new Label("The speed of sound is " + getSpeed( passT ) + " m/s" );
        caption.setColor( Color.red );
        caption.setSize( 20 );
        addObject( caption, 400, 280 );
