@@ -12,7 +12,6 @@ import java.awt.GraphicsEnvironment;  // (World, Actor, GreenfootImage, Greenfoo
  */
 public class SonarWorld extends World
 {
-    String name;
     double echo;
     double temp;
     double distance;
@@ -32,11 +31,10 @@ public class SonarWorld extends World
         super(800, 400, 1);
     }
     
-    public SonarWorld( double e, double t, String n, int passT )
+    public SonarWorld( double e, double t, int passT )
     {
        super(800, 400, 1);
        //Deault reference values
-       name = n;
        echo = e;
        temp = t;
        distance = getDistance( passT );
@@ -59,8 +57,8 @@ public class SonarWorld extends World
        addObject( new Timer(), 0, 0 );
        
        //Show the calculated distance
-       Label caption = new Label("The distance from SOURCE to " + name + " is " + distance );
-       caption.setColor( Color.white );
+       Label caption = new Label("The objects are " + distance + " meters apart.");
+       caption.setColor( Color.red );
        caption.setSize( 20 );
        addObject( caption, 400, 300 );
        

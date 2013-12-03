@@ -28,11 +28,9 @@ public class InputWorld extends World
     private Button space;
     private Button calculate;
     
-    private TextBox nameBox;
     private TextBox echoBox;
     private TextBox tempBox;
     
-    String name;
     String echo;
     String temp;
 
@@ -51,25 +49,28 @@ public class InputWorld extends World
         theTemp = 0;
         
         //Give default vales to references when world is created
-        name = "name";
         echo = "0";
         temp = "0";
         
-        addObject( new Label("Sonar Calculator"), 400, 50 );
+        Label title = new Label("Sonar Calculator" );
+        title.setColor( Color.white );
+        title.setSize( 20 );
+        addObject( title, 400, 75 );
         
-        addObject( new Label("Object name"), 300, 100 );
-        nameBox = new TextBox(new Point(100, 15), "", new Font("Times-Roman", Font.PLAIN, 14));
-        addObject( nameBox, 400, 100 );
-        
-        
-        addObject( new Label("Echo Time (seconds)"), 325, 150 );
+        //Time
+        addObject( new Label("Echo Time"), 285, 150 );
         echoBox = new TextBox(new Point(100, 15), "", new Font("Times-Roman", Font.PLAIN, 14));
-        addObject( echoBox, 450, 150 );
+        addObject( echoBox, 400, 150 );
         
+        addObject( new Label("(SECONDS)"), 495, 150 );
         
+        //Temperature
         addObject( new Label("Temperature"), 300, 200 );
         tempBox = new TextBox(new Point(100, 15), "", new Font("Times-Roman", Font.PLAIN, 14));
         addObject( tempBox, 400, 200 );
+        
+        addObject( new Label("(CHOOSE CELSIUS or FAHRENHEIT)"), 565, 200 );
+        
         //Buttons for temperature
         celsius = new Button("C", new Point(50, 15));
         fahrenheit = new Button("F", new Point(50, 15));
@@ -142,14 +143,13 @@ public class InputWorld extends World
                 
                 //Get values stored in text boxes
                 //Convert to doubles
-                name = nameBox.getText();
                 double echo = Double.parseDouble( echoBox.getText() );                
                 double temp = Double.parseDouble( tempBox.getText() );
                 
                 //Change worlds and display sound wave
                 if( theLevel == 0 )
                 {
-                    Greenfoot.setWorld(new SonarWorld(echo, temp, name, theTemp));
+                    Greenfoot.setWorld(new SonarWorld(echo, temp, theTemp));
                 }
                 else if ( theLevel == 1 )
                 {

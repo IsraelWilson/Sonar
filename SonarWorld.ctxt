@@ -2,8 +2,8 @@
 comment0.params=
 comment0.target=SonarWorld()
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ EchoWorld.\r\n\ \r\n
-comment1.params=e\ t\ n\ passT
-comment1.target=SonarWorld(double,\ double,\ java.lang.String,\ int)
+comment1.params=e\ t\ passT
+comment1.target=SonarWorld(double,\ double,\ int)
 comment2.params=tempType
 comment2.target=double\ getDistance(int)
 comment3.params=

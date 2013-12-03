@@ -36,57 +36,57 @@ public class PromptOne extends World
         Label line2 = new Label( "objects using sound waves and the parameter of temperature in the air. The" );
         line2.setColor( Color.black );
         line2.setSize( 18 );
-        addObject( line2, 400, 115 );
+        addObject( line2, 400, 120 );
         
         Label line3 = new Label( "user is required to input the time in which it takes their voice to travel" );
         line3.setColor( Color.black );
         line3.setSize( 18 );
-        addObject( line3, 400, 130 );
+        addObject( line3, 400, 140 );
         
         Label line4 = new Label( "from the object and back seconds(echo). In addition the user is required to" );
         line4.setColor( Color.black );
         line4.setSize( 18 );
-        addObject( line4, 400, 145 );
+        addObject( line4, 400, 160 );
         
         Label line5 = new Label( "input the current temperature in air (Celsius/Fahrenheit)." );
         line5.setColor( Color.black );
         line5.setSize( 18 );
-        addObject( line5, 400, 160 );
+        addObject( line5, 400, 180 );
         
         Label line6 = new Label( "The basis of Sonar stems from the speed of sound equation;" );
         line6.setColor( Color.black );
         line6.setSize( 18 );
-        addObject( line6, 400, 185 );
+        addObject( line6, 400, 200 );
         
         Label line7 = new Label( "the speed of sound is determined by the conditions of air" );
         line7.setColor( Color.black );
         line7.setSize( 18 );
-        addObject( line7, 400, 200 );
+        addObject( line7, 400, 220 );
         
         Label line8 = new Label( "itself (e.g. humidity, temperature, and altitude). It is not" );
         line8.setColor( Color.black );
         line8.setSize( 18 );
-        addObject( line8, 400, 215 );
+        addObject( line8, 400, 240 );
         
         Label line9 = new Label( "dependent on the sounds amplitude, frequency, or wavelength." );
         line9.setColor( Color.black );
         line9.setSize( 18 );
-        addObject( line9, 400, 230 );
+        addObject( line9, 400, 260 );
         
         Label line10 = new Label( "To calculate the approximate speed of sound in dry air at sea level" );
         line10.setColor( Color.black );
         line10.setSize( 18 );
-        addObject( line10, 400, 245 );
+        addObject( line10, 400, 280 );
         
         Label line11 = new Label( "is represented by the following formula:" );
         line11.setColor( Color.black );
         line11.setSize( 18 );
-        addObject( line11, 400, 260 );
+        addObject( line11, 400, 300 );
         
         Label line12 = new Label( "v = 331.4 m/s + 0.6 m/s * T celsius" );
         line12.setColor( Color.black );
         line12.setSize( 25 );
-        addObject( line12, 400, 300 );        
+        addObject( line12, 400, 330 );        
         
          
         
