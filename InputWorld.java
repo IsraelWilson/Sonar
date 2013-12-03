@@ -146,6 +146,10 @@ public class InputWorld extends World
                 double echo = Double.parseDouble( echoBox.getText() );                
                 double temp = Double.parseDouble( tempBox.getText() );
                 
+                if( echo < 0 ){
+                    echo = echo * -1;
+                }
+                
                 //Change worlds and display sound wave
                 if( theLevel == 0 )
                 {
