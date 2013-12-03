@@ -45,6 +45,12 @@ public class SonarWorld extends World
        leftSquare = 325 - ((int)(echo/4));
        rightSquare = 475 + ((int)(echo/4));
        
+       //Keep the boundaries of the waves inside the world
+       if( leftSquare < -40 ){
+           leftSquare = -40;
+           rightSquare = 840;
+        }
+        
        //Sqaure Object
        addObject( new Square(), leftSquare, 200 );
        addObject( new Square(), rightSquare, 200 );
@@ -56,11 +62,17 @@ public class SonarWorld extends World
        //Timer Object
        addObject( new Timer(), 0, 0 );
        
-       //Show the calculated distance
-       Label caption = new Label("The objects are " + distance + " meters apart.");
+       //Show the calculated speed of sound
+       Label caption = new Label("The speed of sound is " + getSpeed( passT ) );
        caption.setColor( Color.red );
        caption.setSize( 20 );
-       addObject( caption, 400, 300 );
+       addObject( caption, 400, 280 );
+       
+       //Show the calculated distance
+       Label speedLabel = new Label("The objects are " + distance + " meters apart.");
+       speedLabel.setColor( Color.red );
+       speedLabel.setSize( 20 );
+       addObject( speedLabel, 400, 300 );
        
        //Final input button
         input = new Button("Input", new Point(100, 50));
@@ -90,6 +102,22 @@ public class SonarWorld extends World
         distance = ( ( velocity * echoVal )/ 2 );        
         
         return distance;
+    }
+    
+    public double getSpeed( int tempType )
+    {
+        //Convert string data into double value
+        double echoVal = echo;
+        double tempVal = temp;
+         if( tempType == 1 ){
+             double hold = tempVal - 32;
+             tempVal = hold / 1.8;
+             
+            }
+        
+        double velocity = ( 331.5 + ( 0.6 * tempVal ) );       
+        
+        return velocity;
     }
     
     public int getLSquare(){
