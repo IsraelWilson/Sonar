@@ -1,14 +1,6 @@
 import greenfoot.World;
 
-/**
- * WindowComponent
- * <p>
- * A component to be used within a Window.<p>
- * Handles horizontal and vertical justification (beginning, center, and end) within a cell of a Container.
- * 
- * @author Taylor Born
- * @version February 2013 - March 2013
- */
+
 public abstract class Window extends GUI
 {
     public static final int BEGINNING = 0, CENTER = 1, END = 2;

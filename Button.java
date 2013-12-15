@@ -7,16 +7,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-/**
- * Button
- * <p>
- * GUI item that is a box that captures click events on itself.<p>
- * <p>
- * Action listener: wasClicked()
- * 
- * @author Taylor Born
- * @version November 2010 - April 2013
- */
+
 public class Button  extends Window
 {
     private Point size;

@@ -4,14 +4,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Color;
 
-/**
- * Label
- * <p>
- * Used to display a String.
- * 
- * @author Taylor Born
- * @version November 2010 - April 2013
- */
+
 public class Label extends Window
 {
     private static Color defaultColor = Color.BLACK;

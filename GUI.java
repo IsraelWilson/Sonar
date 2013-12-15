@@ -14,15 +14,7 @@ import java.awt.Toolkit;
 import java.io.IOException;
 import java.security.AccessControlException;
 
-/**
- * GUI_Component
- * <p>
- * A component to be used in GUI system.<p>
- * Handles listening for mouse hover, and statuses for being hidden, will show, and focus.
- * 
- * @author Taylor Born
- * @version March 2013 - April 2013
- */
+
 public abstract class GUI extends Actor
 {
     protected static TextTransfer textTransfer = new TextTransfer();

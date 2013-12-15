@@ -9,33 +9,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-/**
- * TextBox
- * <p>
- * A container for an editable String.<br>
- * Works with different Fonts and sizes.<br>
- * <p>
- * Has caret position to input at particular index.<br>
- * Can move caret around by clicking at some position or by using arrow keys.<br>
- * <p>
- * Editable if has focus. Click on TextBox to give it focus. Loses focus when clicked off of it.<br>
- * Scrollable (by mouse wheel or click and dragging scroll bar) when String not all viewable at once.<br>
- * Auto scrolls while you type to stay with the blinking cursor.<br>
- * <p>
- * Accepts by default:<br>
- * All lower- and upper- case letters, all standard punctuation, new lines.<br>
- * <p>
- * Includes text selection which can be done by:<br>
- * 1. Click and drag.<br>
- * 2. Shift + click.<br>
- * 3. Shift + arrow keys.<br>
- * 4. Ctrl+a.<br>
- * <p>
- * Includes copy/cut/paste functionality with ctrl+c / ctrl+x / ctrl+v<br>
- * 
- * @author Taylor Born
- * @version November 2010 - April 2013
- */
+
 public class TextBox extends Window
 {
     /**
